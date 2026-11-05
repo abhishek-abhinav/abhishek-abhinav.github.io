@@ -405,3 +405,303 @@ img, video, iframe, canvas, svg { max-width:100%; }
   transition:background .2s,border-color .2s,transform .2s;
 }
 .theme-toggle:hover { transform:translateY(-1px); border-color:var(--accent); }
+
+
+/* ===== Final responsive and accessible theme corrections ===== */
+html, body {
+  width:100%;
+  max-width:100%;
+  min-width:0;
+  overflow-x:hidden;
+}
+*, *::before, *::after { box-sizing:border-box; }
+body { min-width:320px; }
+main, section, header, footer, nav, .container, .hero-grid,
+.grid-2, .grid-3, .skills-grid, .timeline, .project-layout,
+.case-article, .contact-page-grid, .video-gallery-grid,
+.ai-video-grid, .evidence-grid { min-width:0; }
+img, iframe, video, canvas, svg { max-width:100%; }
+.grid-2, .grid-3, .stats, .skills-grid, .timeline,
+.project-layout, .contact-page-grid, .evidence-grid,
+.video-gallery-grid, .ai-video-grid {
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));
+}
+.nav { min-width:0; }
+.brand-logo { flex:0 0 auto; }
+.nav-links { min-width:0; }
+.theme-toggle { position:relative; z-index:22; }
+.menu-btn { flex:0 0 auto; }
+
+/* Mobile: balanced header with the theme switch centred and menu at the far right. */
+@media (max-width:680px) {
+  .container {
+    width:100% !important;
+    max-width:100% !important;
+    padding-left:20px !important;
+    padding-right:20px !important;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .nav {
+    height:68px;
+    display:grid;
+    grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
+    align-items:center;
+    gap:8px;
+    padding-left:16px !important;
+    padding-right:16px !important;
+    position:relative;
+  }
+  .brand-logo { grid-column:1; justify-self:start; width:52px; height:52px; }
+  .theme-toggle {
+    grid-column:2;
+    justify-self:center;
+    padding:8px 12px;
+    font-size:.78rem;
+  }
+  .menu-btn {
+    grid-column:3;
+    justify-self:end;
+    display:flex !important;
+    width:44px;
+    height:42px;
+    padding:8px;
+  }
+  .nav-links {
+    position:absolute !important;
+    top:68px !important;
+    left:0 !important;
+    right:0 !important;
+    width:100%;
+    padding:20px 22px 24px !important;
+    background:var(--panel) !important;
+    border-bottom:1px solid var(--line);
+    box-shadow:0 16px 28px rgba(20,45,70,.12);
+    z-index:30;
+  }
+  .nav-links.open { display:flex !important; }
+  .nav-cta { display:none !important; }
+  .hero {
+    width:100%;
+    max-width:100%;
+    padding:54px 0 68px;
+    min-height:0;
+    overflow:hidden;
+  }
+  .hero-grid {
+    width:100%;
+    grid-template-columns:minmax(0,1fr);
+    gap:36px;
+  }
+  .hero-content, .hero-grid > *, .section-head,
+  .card, .education-card, .timeline-card { min-width:0; }
+  .hero h1 {
+    font-size:clamp(2.35rem,9.6vw,3.5rem);
+    line-height:1.08;
+    overflow-wrap:normal;
+    word-break:normal;
+  }
+  .hero-copy, .section-intro, .card p, .education-card p,
+  .timeline-card p { overflow-wrap:anywhere; }
+  .hero-actions { display:flex; flex-wrap:wrap; }
+  .hero-actions .btn { flex:1 1 145px; min-width:0; white-space:normal; }
+  .hero-meta { gap:10px 14px; }
+  .portrait-wrap {
+    width:min(100%,330px);
+    max-width:100%;
+    margin:0 auto;
+    padding:0 4px;
+  }
+  .portrait-frame { width:100%; }
+  .portrait-note {
+    left:12px;
+    right:12px;
+    bottom:12px;
+    width:auto;
+    max-width:none;
+    padding:10px 12px;
+  }
+  .portrait-note b { font-size:.78rem; }
+  .portrait-note small { font-size:.68rem; }
+  .chip-top { top:12px; right:12px; }
+  .chip-bottom { top:12px; left:12px; right:auto; bottom:auto; }
+  .floating-chip { max-width:calc(50% - 16px); white-space:nowrap; }
+  .section { padding:58px 0; }
+  .section-head { margin-bottom:26px; }
+  .stats, .grid-2, .grid-3, .skills-grid, .timeline,
+  .video-grid, .evidence-grid, .ai-video-grid,
+  .video-gallery-grid { grid-template-columns:minmax(0,1fr); }
+  .stat, .card, .skill-card, .timeline-card,
+  .education-card, .capability, .detail-block,
+  .article-block { padding:20px; }
+  .page-hero { padding:44px 0 28px; }
+  .project-toolbar { gap:8px; }
+  .project-layout { grid-template-columns:minmax(0,1fr); }
+  .detail-aside { grid-template-columns:minmax(0,1fr); }
+  .case-hero { padding:34px 0 36px; }
+  .case-hero h1 { font-size:clamp(2.1rem,9vw,3.2rem); }
+  .feature-list { columns:1; }
+  .level-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .case-video-frame { width:100%; max-width:100%; }
+  .case-video-frame iframe { width:100%; height:100%; }
+  .modal, .ai-video-modal { padding:12px; }
+  .modal-dialog, .ai-video-modal-dialog { width:100%; max-width:100%; }
+  .modal-video, .ai-video-modal-stage { width:100%; max-width:100%; }
+  .modal-video iframe, .ai-video-modal-stage iframe { width:100%; max-width:100%; }
+  .footer-inner { align-items:flex-start; }
+}
+@media (max-width:380px) {
+  .container { padding-left:16px !important; padding-right:16px !important; }
+  .nav { padding-left:12px !important; padding-right:12px !important; }
+  .hero h1 { font-size:clamp(2.2rem,9vw,2.7rem); }
+  .hero-actions .btn { flex-basis:100%; }
+  .theme-toggle { padding:7px 9px; font-size:.72rem; }
+}
+
+/* Light mode: explicitly recolour every alternating section and card surface.
+   This prevents dark-mode hard-coded colours from reducing contrast in light mode. */
+:root[data-theme="light"] {
+  color-scheme:light;
+  --bg:#f5f8fc;
+  --panel:#ffffff;
+  --panel2:#edf3f9;
+  --text:#142235;
+  --muted:#52657a;
+  --line:rgba(28,59,91,.15);
+  --accent:#087fbd;
+  --accent2:#1765b3;
+  --glow:rgba(25,153,215,.10);
+}
+:root[data-theme="light"] body {
+  background:#f5f8fc;
+  color:#142235;
+}
+:root[data-theme="light"] .section-alt {
+  background:linear-gradient(180deg,#edf4fa 0%,#f7fafd 100%);
+  border-top:1px solid rgba(28,59,91,.10);
+  border-bottom:1px solid rgba(28,59,91,.10);
+}
+:root[data-theme="light"] .section,
+:root[data-theme="light"] .page-hero,
+:root[data-theme="light"] main { color:#142235; }
+:root[data-theme="light"] h1,
+:root[data-theme="light"] h2,
+:root[data-theme="light"] h3,
+:root[data-theme="light"] .section-head,
+:root[data-theme="light"] .section-head h2,
+:root[data-theme="light"] .page-hero h1,
+:root[data-theme="light"] .case-hero h1,
+:root[data-theme="light"] .education-card h3,
+:root[data-theme="light"] .timeline-card h3,
+:root[data-theme="light"] .card h3,
+:root[data-theme="light"] .skill-card h3,
+:root[data-theme="light"] .capability h3 {
+  color:#142b43;
+}
+:root[data-theme="light"] .section-intro,
+:root[data-theme="light"] .hero-copy,
+:root[data-theme="light"] .card p,
+:root[data-theme="light"] .education-card p,
+:root[data-theme="light"] .timeline-card p,
+:root[data-theme="light"] .timeline-card li,
+:root[data-theme="light"] .capability p,
+:root[data-theme="light"] .muted,
+:root[data-theme="light"] .breadcrumbs {
+  color:#52677d;
+}
+:root[data-theme="light"] .kicker,
+:root[data-theme="light"] .eyebrow,
+:root[data-theme="light"] .education-card .date,
+:root[data-theme="light"] .timeline-card .date {
+  color:#087fbd;
+}
+:root[data-theme="light"] .education-card,
+:root[data-theme="light"] .timeline-card,
+:root[data-theme="light"] .stat,
+:root[data-theme="light"] .card,
+:root[data-theme="light"] .skill-card,
+:root[data-theme="light"] .capability {
+  background:#ffffff;
+  color:#142235;
+  border-color:rgba(28,59,91,.14);
+  box-shadow:0 10px 28px rgba(29,63,96,.055);
+}
+:root[data-theme="light"] .education-card strong,
+:root[data-theme="light"] .timeline-card strong {
+  color:#203c56;
+}
+:root[data-theme="light"] .section-alt .section-intro,
+:root[data-theme="light"] .section-alt .kicker,
+:root[data-theme="light"] .section-alt h2,
+:root[data-theme="light"] .section-alt h3 {
+  opacity:1;
+}
+:root[data-theme="light"] .nav-links.open {
+  background:#fff !important;
+  color:#334e67;
+}
+:root[data-theme="light"] .menu-btn span { background:#1b3852; }
+:root[data-theme="light"] .portrait-note {
+  background:rgba(255,255,255,.97);
+  color:#142b43;
+  border-color:rgba(28,104,153,.22);
+}
+:root[data-theme="light"] .portrait-note small { color:#52677d; }
+:root[data-theme="light"] .floating-chip {
+  background:#fff;
+  color:#155477;
+  border-color:rgba(25,137,194,.28);
+}
+:root[data-theme="light"] .article-block {
+  background:#fff;
+  color:#142235;
+  border-color:rgba(28,88,130,.16);
+}
+:root[data-theme="light"] .article-block h2,
+:root[data-theme="light"] .article-block h3,
+:root[data-theme="light"] .workflow-steps h3 { color:#172b40; }
+:root[data-theme="light"] .article-block p,
+:root[data-theme="light"] .article-block li { color:#52677d; }
+:root[data-theme="light"] .workflow-steps li,
+:root[data-theme="light"] .level-grid div { background:#f2f7fb; }
+:root[data-theme="light"] .screenshot-slot,
+:root[data-theme="light"] .evidence-placeholder {
+  background:#f3f8fc;
+  color:#314b62;
+}
+:root[data-theme="light"] .screenshot-slot b,
+:root[data-theme="light"] .evidence-placeholder b { color:#1b344b; }
+:root[data-theme="light"] .screenshot-slot span,
+:root[data-theme="light"] .screenshot-slot small,
+:root[data-theme="light"] .evidence-placeholder span { color:#52677d; }
+:root[data-theme="light"] .case-stack span,
+:root[data-theme="light"] .tags span,
+:root[data-theme="light"] .skill-list span {
+  color:#36536c;
+  background:#f0f6fa;
+  border-color:rgba(28,59,91,.13);
+}
+:root[data-theme="light"] .project-card .card-link,
+:root[data-theme="light"] .card-link { color:#087fbd; }
+:root[data-theme="light"] .footer { color:#52677d; }
+:root[data-theme="light"] .cta-panel {
+  background:linear-gradient(145deg,#fff,#edf6fb);
+  color:#142235;
+}
+:root[data-theme="light"] .cta-panel .section-intro { color:#52677d; }
+:root[data-theme="light"] .btn-secondary {
+  color:#18334b;
+  background:#fff;
+  border-color:rgba(8,127,189,.25);
+}
+:root[data-theme="light"] .nav-cta,
+:root[data-theme="light"] .btn-primary { color:#fff; }
+
+/* Desktop navigation ordering: keep links grouped before the theme control. */
+@media (min-width:681px) {
+  .brand-logo { order:1; }
+  .nav-links { order:2; }
+  .theme-toggle { order:3; }
+  .nav-cta { order:4; }
+  .menu-btn { order:5; }
+}
