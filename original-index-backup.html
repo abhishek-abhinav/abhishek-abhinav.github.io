@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek Abhinav | Web Developer & Creative Designer</title>
+    <meta name="description"
+        content="Portfolio of Abhishek Abhinav - Web Developer and Creative Designer specializing in modern, interactive web experiences and graphic design.">
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="My_Logo.png">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo" style="display: flex; align-items: center;">
+                <img src="My_Logo.png" alt="Abhishek Logo" style="height: 70px; width: auto; object-fit: contain;">
+            </a>
+
+            <div class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Websites</a></li>
+                    <li class="nav-item"><a href="#automations" class="nav-link">Automations</a></li>
+                    <li class="nav-item"><a href="#design" class="nav-link">Design</a></li>
+                    <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="nav-toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- ================= HERO SECTION ================= -->
+        <section id="home" class="hero section">
+            <div class="hero-bg"></div>
+            <div class="container hero-content">
+                <h1 class="hero-title">
+                    <span class="greeting">Hi, I'm</span><br>
+                    <span class="name">Abhi<span class="highlight">shek</span> Abhinav</span>
+                </h1>
+                <h2 class="hero-subtitle">Web Developer <span class="divider">|</span> Automation Engineer</h2>
+                <p class="hero-desc">Crafting modern, interactive web experiences and visually stunning designs that
+                    leave a lasting impression.</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary interactive">View Projects</a>
+                    <a href="#contact" class="btn btn-outline interactive">Contact Me</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <a href="#about" aria-label="Scroll Down" class="interactive">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- ================= ABOUT SECTION ================= -->
+        <section id="about" class="about section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>Hello! I'm Abhishek, a passionate <strong>Web Developer</strong> and <strong>Creative
+                                Designer</strong> with a knack for turning ideas into reality. I specialize in building
+                            responsive, high-performance websites and crafting intuitive user interfaces.</p>
+                        <p>With a background that spans both technical development and creative design, I bring a unique
+                            perspective to every project, ensuring that it looks stunning while functioning flawlessly.
+                        </p>
+
+                        <div class="about-stats">
+                            <div class="stat-item glass-card">
+                                <h3 class="stat-num" data-val="2">0</h3>
+                                <p class="stat-text">Years Experience</p>
+                            </div>
+                            <div class="stat-item glass-card">
+                                <h3 class="stat-num" data-val="20">0</h3>
+                                <p class="stat-text">Projects Finished</p>
+                            </div>
+                            <div class="stat-item glass-card">
+                                <h3 class="stat-num" data-val="40">0</h3>
+                                <p class="stat-text">Automations Built</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <div class="glass-card image-wrapper" style="padding: 0;">
+                            <img src="Gemini_Enhanced.png" alt="Abhishek Profile" style="height: 150%; object-fit: cover; border-radius: var(--border-radius); top: 50px;
+    position: relative;">
+                            <!-- Floating decoration elements -->
+                            <div class="float-icon icon-1"><i class="fab fa-html5"></i></div>
+                            <div class="float-icon icon-2"><i class="fab fa-css3-alt"></i></div>
+                            <div class="float-icon icon-3"><i class="fab fa-js"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SKILLS SECTION ================= -->
+        <section id="skills" class="skills section">
+            <div class="container">
+                <h2 class="section-title">My Toolkit</h2>
+                <div class="skills-container">
+                    <!-- Frontend -->
+                    <div class="skill-category glass-card">
+                        <h3 class="category-title"><i class="fas fa-code"></i> Frontend & Core</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3 (Flexbox/Grid)</span>
+                            <span class="skill-tag">JavaScript (ES6+)</span>
+                            <span class="skill-tag">Responsive UI Development</span>
+                            <span class="skill-tag">React.js</span>
+                            <span class="skill-tag">GSAP / Framer Motion</span>
+                        </div>
+                    </div>
+
+                    <!-- CMS & Tools -->
+                    <div class="skill-category glass-card">
+                        <h3 class="category-title"><i class="fas fa-tools"></i> CMS & Backend</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">WordPress</span>
+                            <span class="skill-tag">Elementor Pro</span>
+                            <span class="skill-tag">Website Maintenance & Optimization</span>
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">Git & GitHub</span>
+                            <span class="skill-tag">Node.js (Basic)</span>
+                        </div>
+                    </div>
+
+                    <!-- Automation & AI -->
+                    <div class="skill-category glass-card">
+                        <h3 class="category-title">
+                            <i class="fas fa-robot"></i> Automation & AI
+                        </h3>
+
+                        <div class="skill-tags">
+                            <span class="skill-tag">n8n</span>
+                            <span class="skill-tag">APIs</span>
+                            <span class="skill-tag">Webhooks</span>
+                            <span class="skill-tag">AI Tools</span>
+                            <span class="skill-tag">Lead Automation</span>
+                            <span class="skill-tag">Email Automation</span>
+                            <span class="skill-tag">CRM Automation</span>
+                            
+                        </div>
+                    </div>
+
+                    <!-- Design -->
+                    <div class="skill-category glass-card">
+                        <h3 class="category-title"><i class="fas fa-pen-nib"></i> Design & UI/UX</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">Adobe Photoshop</span>
+                            <span class="skill-tag">Website Design Systems</span>
+                            <span class="skill-tag">Marketing Creatives</span>
+                            <span class="skill-tag">Brochures & Branding</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PROJECTS SECTION ================= -->
+        <section id="projects" class="projects section">
+            <div class="container">
+                <h2 class="section-title">Selected Work</h2>
+
+                <!-- 🔥 FEATURED PROJECTS -->
+                <h3 class="sub-title">Featured Projects</h3>
+
+                <div class="projects-grid featured-projects">
+
+                    <!-- Apricotas -->
+                    <div class="project-card glass-card featured">
+                        <div class="project-img">
+                            <img src="Apricotas.webp" alt="Apricotas">
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Apricotas Technologies</h3>
+                            <p class="project-desc">
+                                Corporate website designed for a security & surveillance solutions company
+                                showcasing products, systems, and smart infrastructure.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>Corporate</span>
+                                <span>Product Showcase</span>
+                                <span>Lead Generation</span>
+                            </div>
+
+                            <a href="https://apricotas.com" target="_blank" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+
+                    <!-- G7 -->
+                    <div class="project-card glass-card featured">
+                        <div class="project-img">
+                            <img src="G7Consultant.webp" alt="G7 Consultant">
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">G7 Consultant</h3>
+                            <p class="project-desc">
+                                Corporate consulting website built to connect global businesses with India’s
+                                manufacturing network.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>Corporate</span>
+                                <span>Global Business</span>
+                                <span>Responsive</span>
+                            </div>
+
+                            <a href="https://demo.g7consultant.com" target="_blank" class="btn btn-primary">View
+                                Project</a>
+                        </div>
+                    </div>
+
+                    <!-- Webking -->
+                    <div class="project-card glass-card featured">
+                        <div class="project-img">
+                            <img src="webking-site.png" alt="Webking">
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Webking Solutions (Redesign)</h3>
+                            <p class="project-desc">
+                                Complete redesign of company website focusing on modern UI, improved UX,
+                                and better conversion structure.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>Website Redesign</span>
+                                <span>UI/UX</span>
+                                <span>Performance</span>
+                            </div>
+
+                            <a href="https://webkingsolutions.com" target="_blank" class="btn btn-primary">View
+                                Project</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 🔽 OTHER PROJECTS -->
+                <h3 class="sub-title" style="margin-top:60px;">Other Projects</h3>
+
+                <div class="projects-grid small-projects">
+
+                    <div class="project-card glass-card small">
+                        <img src="DCGCopper.webp" alt="DCGCopper">
+                        <div class="project-info">
+                            <h3>DCG Cables & Wires</h3>
+                            <p>Industrial manufacturing website showcasing products & capabilities.</p>
+                            <a href="https://dcgcableswiresltd.com/" target="_blank">View Project →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass-card small">
+                        <img src="E-Khanate.webp" alt="E-Khanate">
+                        <div class="project-info">
+                            <h3>E-Khanate Worldwide</h3>
+                            <p>Corporate consulting website for EU expansion.</p>
+                            <a href="https://e-khanate.com/" target="_blank">View Project →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass-card small">
+                        <img src="SahayML.webp" alt="SahayML">
+                        <div class="project-info">
+                            <h3>Sahay ML</h3>
+                            <p>Industrial product website for metalworking solutions.</p>
+                            <a href="https://sahayml.com/" target="_blank">View Project →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass-card small">
+                        <img src="Sukhdham.webp" alt="Sukhdham">
+                        <div class="project-info">
+                            <h3>Sukhdham Ashram</h3>
+                            <p>Community website for retirement services.</p>
+                            <a href="https://sukhdham.co.in/" target="_blank">View Project →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass-card small">
+                        <img src="Synergy.webp" alt="Synergy Imaging">
+                        <div class="project-info">
+                            <h3>Synergy Imaging</h3>
+                            <p>Healthcare imaging & diagnostics website.</p>
+                            <a href="https://synergyimaging.co.in/" target="_blank">View Project →</a>
+                        </div>
+                    </div>
+                    <div class="project-card glass-card small">
+                        <img src="GeetHub-preview.png" alt="GeetHub">
+                        <div class="project-info">
+                            <h3>GeetHub – Music Streaming Web App</h3>
+                            <p>Web-based music streaming app with playlist management and smooth audio controls.</p>
+                            <a href="https://abhishek-abhinav.github.io/GeetHub/" target="_blank">View Project →</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= AUTOMATIONS SECTION ================= -->
+        <section id="automations" class="automations section">
+            <div class="container">
+                <h2 class="section-title">Workflow Automations</h2>
+
+                <p class="section-sub">
+                    Automating business workflows, lead systems, and internal operations using n8n & APIs.
+                </p>
+
+                <div class="automations-grid">
+
+                    <!-- ================= EMAIL ================= -->
+                    <div class="automation-card glass-card">
+                        <i class="fas fa-envelope-open-text"></i>
+                        <h3>Email Marketing Automation</h3>
+
+                        <p>Automated lead outreach, follow-ups, and email pipelines for scalable client acquisition.</p>
+
+                        <!-- ⭐ FEATURED -->
+                        <div class="featured-work">
+                            <strong>Key Work:</strong>
+                            <ul>
+                                <li>Cold email automation with personalization</li>
+                                <li>Lead scraping + enrichment system</li>
+                            </ul>
+                        </div>
+
+                        <button class="expand-btn">View All Workflows</button>
+
+                        <div class="automation-details">
+                            <ul class="automation-list">
+                                <li>Lead data collection (India & Global)</li>
+                                <li>Personalized proposal automation</li>
+                                <li>Follow-up email sequencing</li>
+                                <li>Bounce detection & cleaning</li>
+                                <li>Intent-based outreach</li>
+                                <li>Lead reply forwarding</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ================= CLIENT ================= -->
+                    <div class="automation-card glass-card">
+                        <i class="fas fa-user-check"></i>
+                        <h3>Client Lifecycle Automation</h3>
+
+                        <p>Automated onboarding, engagement, and retention systems to improve customer experience.</p>
+
+                        <div class="featured-work">
+                            <strong>Key Work:</strong>
+                            <ul>
+                                <li>Google review automation system</li>
+                                <li>Referral & reward automation</li>
+                            </ul>
+                        </div>
+
+                        <button class="expand-btn">View All Workflows</button>
+
+                        <div class="automation-details">
+                            <ul class="automation-list">
+                                <li>Feedback request automation</li>
+                                <li>Google review campaigns</li>
+                                <li>Customer retention workflows</li>
+                                <li>Referral & reward system</li>
+                                <li>Reconnect campaigns</li>
+                                <li>Complaint collection system</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ================= BUSINESS ================= -->
+                    <div class="automation-card glass-card">
+                        <i class="fas fa-cogs"></i>
+                        <h3>Business Process Automation</h3>
+
+                        <p>Internal workflow automation to improve productivity and reduce manual operations.</p>
+
+                        <div class="featured-work">
+                            <strong>Key Work:</strong>
+                            <ul>
+                                <li>Task tracking + reminder automation</li>
+                                <li>Helpdesk follow-up system</li>
+                            </ul>
+                        </div>
+
+                        <button class="expand-btn">View All Workflows</button>
+
+                        <div class="automation-details">
+                            <ul class="automation-list">
+                                <li>Task tracking & reminders</li>
+                                <li>Helpdesk automation</li>
+                                <li>Internal communication workflows</li>
+                                <li>Daily reporting system</li>
+                                <li>Workflow backup automation</li>
+                                <li>Social media auto-posting</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ================= CRM ================= -->
+                    <div class="automation-card glass-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>CRM & Reporting Automation</h3>
+
+                        <p>Automated CRM workflows and reporting systems for data-driven decision making.</p>
+
+                        <div class="featured-work">
+                            <strong>Key Work:</strong>
+                            <ul>
+                                <li>CRM follow-up reminder system</li>
+                                <li>Automated performance reporting</li>
+                            </ul>
+                        </div>
+
+                        <button class="expand-btn">View All Workflows</button>
+
+                        <div class="automation-details">
+                            <ul class="automation-list">
+                                <li>Follow-up reminders (due & overdue)</li>
+                                <li>Performance reports</li>
+                                <li>Meeting sync (CRM → Calendar)</li>
+                                <li>End-of-day reports</li>
+                                <li>CRM backup automation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= DESIGN SECTION ================= -->
+        <section id="design" class="design section">
+            <div class="container">
+                <h2 class="section-title">Graphic Design</h2>
+
+                <div class="design-grid">
+
+                    <!-- FFF Brochure -->
+                    <div class="design-card glass-card">
+                        <img src="fff-brochure-preview.png" alt="FFF Brochure">
+                        <div class="design-overlay">
+                            <h3>FFF Brochure</h3>
+                            <p>Film institute promotional brochure</p>
+                            <a href="FFF Brochure.pdf" target="_blank">View</a>
+                        </div>
+                    </div>
+
+                    <!-- Webking Company Profile -->
+                    <div class="design-card glass-card">
+                        <img src="webking-preview.png" alt="Company Profile">
+                        <div class="design-overlay">
+                            <h3>Company Profile</h3>
+                            <p>Corporate brochure design</p>
+                            <a href="Webking Solutions - Company Profile v4.3.pdf" target="_blank">View</a>
+                        </div>
+                    </div>
+
+                    <!-- FFF Banner -->
+                    <div class="design-card glass-card">
+                        <img src="FFF Banner.png" alt="FFF Banner">
+                        <div class="design-overlay">
+                            <h3>Course Promotion Banner</h3>
+                            <p>Social media ad creative</p>
+                            <a href="FFF Banner.png" target="_blank">View</a>
+                        </div>
+                    </div>
+
+                    <!-- LPG Campaign Banner -->
+                    <div class="design-card glass-card">
+                        <img src="LPG_banner.jpeg" alt="LPG Campaign">
+                        <div class="design-overlay">
+                            <h3>Moment Marketing Campaign</h3>
+                            <p>LPG shortage themed campaign for cloud website promotion</p>
+                            <a href="LPG_banner.jpeg" target="_blank">View</a>
+                        </div>
+                    </div>
+
+                    <!-- AI Sales Banner -->
+                    <div class="design-card glass-card">
+                        <img src="Dhurandhar_collection.png" alt="AI Sales Banner">
+                        <div class="design-overlay">
+                            <h3>Moment Marketing Campaign</h3>
+                            <p>AI-driven sales campaign creative for business automation</p> <a
+                                href="Dhurandhar_collection.png" target="_blank">View</a>
+                        </div>
+                    </div>
+
+                    <!-- Festival Campaign Banner -->
+                    <div class="design-card glass-card">
+                        <img src="GudiPadwa-banner.jpeg" alt="Festival Campaign">
+                        <div class="design-overlay">
+                            <h3>Moment Marketing Campaign</h3>
+                            <p>Festival-based campaign for cloud email services</p>
+                            <a href="GudiPadwa-banner.jpeg" target="_blank">View</a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!-- ================= EXPERIENCE SECTION ================= -->
+        <section id="experience" class="experience section">
+            <div class="container">
+                <h2 class="section-title">Experience</h2>
+                <div class="timeline">
+
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <h3 class="timeline-title">Web Developer</h3>
+                            <h4 class="timeline-company">Webking Solutions, Ahmedabad</h4>
+                            <span class="timeline-date">Nov 2025 - Present</span>
+                            <p>
+                                Developing modern, responsive websites using WordPress, Elementor, and custom code.
+                                Focused on performance optimization, UI/UX improvements, and delivering client-focused
+                                solutions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <h3 class="timeline-title">Junior Web Developer</h3>
+                            <h4 class="timeline-company">TTEC, Ahmedabad</h4>
+                            <span class="timeline-date">Oct 2024 - Oct 2025</span>
+                            <p>
+                                Worked as a Technical Support Specialist while contributing to web-related tasks on an
+                                ad-hoc basis.
+                                Assisted in minor website updates, basic frontend changes, and troubleshooting issues
+                                when required.
+                                Developed a strong foundation in problem-solving, debugging, and handling technical
+                                queries.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <h3 class="timeline-title">Associate Technical Support</h3>
+                            <h4 class="timeline-company">Tech Mahindra</h4>
+                            <span class="timeline-date">June 2024 - Oct 2024</span>
+                            <p>
+                                Provided technical support by troubleshooting issues, resolving customer queries, and
+                                ensuring smooth system operations.
+                                Strengthened problem-solving and analytical skills.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CONTACT SECTION ================= -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Let's talk about your project!</h3>
+                        <p>Feel free to reach out for collaborations, freelance projects, or just to say hi.</p>
+                        <div class="info-item" style="margin-top: 2rem;">
+                            <a href="mailto:abhishekabhinav@zohomail.com" class="interactive"
+                                style="display:flex; align-items:center; gap: 1rem; font-size:1.1rem;">
+                                <i class="fas fa-envelope" style="color:var(--primary-color); font-size:1.5rem;"></i>
+                                abhishekabhinav@zohomail.com
+                            </a>
+                        </div>
+                        <div class="social-links" style="display:flex; gap:1rem; margin-top:2rem;">
+                            <a href="https://www.linkedin.com/in/abhi5hekabhinav/" class="social-link interactive"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/abhishek-abhinav" class="social-link interactive"><i
+                                    class="fab fa-github"></i></a>
+                            <a href="https://wa.me/918544121551?text=Hello%20Abhishek%2C%20I%20just%20visited%20your%20portfolio%20website%20and%20really%20liked%20your%20work.%20I%20would%20love%20to%20discuss%20a%20project%20with%20you."
+                                target="_blank" title="WhatsApp" class="social-link interactive"><i
+                                    class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-form glass-card" style="padding: 2.5rem;">
+                        <form action="https://formsubmit.co/abhishekabhinav@zohomail.in" method="POST"
+                            id="contact-form">
+                            <input type="hidden" name="_captcha" value="false">
+                            <div class="form-group" style="margin-bottom: 1.5rem;">
+                                <input type="text" name="name" placeholder="Your Name" required class="form-control"
+                                    style="width:100%; padding:1rem; border-radius:30px; border:1px solid var(--glass-border); background:rgba(0,0,0,0.2); color:var(--text-color); font-family:var(--font-main);">
+                            </div>
+                            <div class="form-group" style="margin-bottom: 1.5rem;">
+                                <input type="email" name="email" placeholder="Your Email" required class="form-control"
+                                    style="width:100%; padding:1rem; border-radius:30px; border:1px solid var(--glass-border); background:rgba(0,0,0,0.2); color:var(--text-color); font-family:var(--font-main);">
+                            </div>
+                            <div class="form-group" style="margin-bottom: 1.5rem;">
+                                <textarea name="message" placeholder="Your Message" rows="5" required
+                                    class="form-control"
+                                    style="width:100%; padding:1rem; border-radius:20px; border:1px solid var(--glass-border); background:rgba(0,0,0,0.2); color:var(--text-color); font-family:var(--font-main); resize:none;"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary interactive" style="width: 100%;">Send Message
+                                <i class="fas fa-paper-plane" style="margin-left: 10px;"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer"
+        style="text-align:center; padding: 2rem 0; border-top: 1px solid var(--glass-border); margin-top: 50px;">
+        <div class="container">
+            <p style="color:var(--text-color-muted);">&copy; <span id="year"></span> Abhishek Abhinav. All rights
+                reserved.</p>
+        </div>
+    </footer>
+
+    <!-- GSAP & Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>

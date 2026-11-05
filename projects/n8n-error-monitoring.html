@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>n8n Production Error Monitoring &amp; Alerts | Abhishek Abhinav</title>
+    <meta name="description"
+        content="An error-triggered monitoring workflow that watches selected production workflows and sends a separate diagnostic email for each failed execution.">
+    <link rel="icon" type="image/png" href="../assets/images/my-logo.png">
+    <link rel="apple-touch-icon" href="../assets/images/my-logo.png">
+    <script>try{document.documentElement.dataset.theme=localStorage.getItem("abhishek-portfolio-theme")==="dark"?"dark":"light"}catch(e){document.documentElement.dataset.theme="light"}</script>
+    <link rel="stylesheet" href="../assets/css/site.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="container nav">
+            <a class="brand-logo" href="../index.html" aria-label="Return to homepage"><img
+                    src="../assets/images/my-logo.png" alt="Abhishek Abhinav logo"></a>
+            <button class="menu-btn" id="menuBtn" aria-label="Open navigation"
+                aria-expanded="false"><span></span><span></span><span></span></button>
+            <div class="nav-links" id="navLinks"><a href="../index.html">Home</a><a class="active"
+                    href="../projects.html">Automation Projects</a><a href="../index.html#skills">Skills</a><a
+                    href="../index.html#experience">Experience</a><a href="../contact.html">Contact</a></div>
+            <a class="nav-cta" href="../contact.html">Let’s Talk ↗</a>
+        </nav>
+    </header>
+    <main>
+        <section class="case-hero">
+            <div class="container">
+                <div class="breadcrumbs"><a href="../index.html">Home</a> / <a href="../projects.html">Projects</a> /
+                    n8n Production Error Monitoring &amp; Alerts</div>
+                <div class="eyebrow">Operations Automation · CASE STUDY</div>
+                <h1>n8n Production Error Monitoring &amp; Alerts</h1>
+                <p class="section-intro">An error-triggered monitoring workflow that watches selected production
+                    workflows and sends a separate diagnostic email for each failed execution.</p>
+                <div class="tags"><span>n8n Error Trigger</span><span>email</span><span>execution metadata</span></div>
+                <div class="case-hero-actions"><a class="btn btn-primary" href="../contact.html">Discuss a similar
+                        system ↗</a><a class="btn btn-secondary" href="../projects.html">← All projects</a></div>
+            </div>
+        </section>
+        <section class="section case-content">
+            <div class="container case-article">
+                <article class="article-block">
+                    <div class="kicker">01 / PROJECT OVERVIEW</div>
+                    <h2>Purpose and scope</h2>
+                    <p>An error-triggered monitoring workflow that watches selected production workflows and sends a
+                        separate diagnostic email for each failed execution.</p>
+                    <p>The error workflow is connected to selected workflows through their error handling configuration.
+                        When a failure occurs, it gathers execution context and sends a diagnostic notification rather
+                        than requiring someone to manually inspect every execution list.</p>
+                </article>
+                <article class="article-block">
+                    <div class="kicker">02 / IMPLEMENTATION DETAILS</div>
+                    <h2>What was built</h2>
+                    <p>The following items describe the documented scope and workflow activities for this
+                        implementation.</p>
+                    <ul class="feature-list">
+                        <li>Monitor selected production workflows.</li>
+                        <li>capture workflow name and error message.</li>
+                        <li>capture execution time and failed node details.</li>
+                        <li>send an immediate email for each failed execution.</li>
+                        <li>include the direct execution link for faster debugging.</li>
+                        <li>support selected production workflows under the automation environment.</li>
+                    </ul>
+                </article>
+                <article class="article-block">
+                    <div class="kicker">03 / WORKFLOW ARCHITECTURE</div>
+                    <h2>How the process is organized</h2>
+                    <p>The error workflow is connected to selected workflows through their error handling configuration.
+                        When a failure occurs, it gathers execution context and sends a diagnostic notification rather
+                        than requiring someone to manually inspect every execution list.</p>
+                    <p>The implementation is organized as a sequence of connected workflow responsibilities: receive the
+                        relevant input or scheduled trigger, validate and map the data, execute the integration or
+                        business logic, then record the result so it can be reviewed by the team.</p>
+                </article>
+                <article class="article-block">
+                    <div class="kicker">04 / SCREENSHOT EVIDENCE</div>
+                    <h2>Project screenshots</h2>
+                    <p>Replace the placeholders with genuine, sanitized screenshots from the actual project. Suggested
+                        evidence: Sanitized error-trigger execution, alert email with redacted details and
+                        execution-link example.</p>
+                    <div class="screenshot-slot" style="padding:0; overflow:hidden;">
+                        <img
+                            src="../assets/images/projects/n8n-error-monitoring-primary.png"
+                            alt="n8n production error monitoring and alert workflow"
+                            style="display:block; width:100%; height:auto; border-radius:12px;">
+                    </div>
+                    <div class="screenshot-slot screenshot-slot-secondary" style="padding:0; overflow:hidden;">
+                        <img
+                            src="../assets/images/projects/n8n-error-monitoring-output.png"
+                            alt="Production workflow error notification email with execution details"
+                            style="display:block; width:100%; height:auto; border-radius:12px;">
+                    </div>
+                </article>
+                <article class="article-block">
+                    <div class="kicker">05 / TECHNOLOGY STACK</div>
+                    <h2>Tools and integrations</h2>
+                    <div class="case-stack"><span>n8n Error Trigger</span><span>email</span><span>execution
+                            metadata</span></div>
+                </article>
+                <article class="article-block">
+                    <div class="kicker">06 / SCOPE & STATUS</div>
+                    <h2>Implementation notes</h2>
+                    <p>Do not claim universal monitoring of every workflow unless the actual error workflow is connected
+                        to all of them.</p>
+                </article>
+                <article class="article-block">
+                    <div class="kicker">07 / BUSINESS VALUE</div>
+                    <h2>Why this workflow matters</h2>
+                    <p>This automation turns a defined operational task into a repeatable process with explicit data
+                        handling and traceable outputs. Its practical value depends on the quality of the source data,
+                        integration availability and the team's operating process. No unverified performance or
+                        financial outcomes are claimed.</p>
+                </article>
+                <!-- FUTURE VIDEO EMBED PLACEHOLDER
+To publish a walkthrough later, replace VIDEO_ID and uncomment this block:
+<section class="case-video-section"><div class="container"><div class="kicker">PROJECT WALKTHROUGH</div><h2>Watch the workflow in action</h2><div class="case-video-frame"><iframe src="https://www.youtube.com/embed/VIDEO_ID" title="n8n Production Error Monitoring &amp; Alerts walkthrough" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div></div></section>
+-->
+                <div class="case-bottom-nav"><a class="btn btn-secondary" href="../projects.html">← Explore all
+                        projects</a><a class="btn btn-primary" href="../contact.html">Contact about a similar project
+                        ↗</a></div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer-inner"><span>© <span id="year"></span> Abhishek Abhinav</span><a
+                href="../index.html">Back to homepage ↑</a></div>
+    </footer>
+    <script src="../assets/js/site.js"></script>
+</body>
+
+</html>

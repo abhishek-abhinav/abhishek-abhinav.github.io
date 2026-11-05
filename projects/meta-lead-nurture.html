@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Meta Lead Nurture — WhatsApp + Email | Abhishek Abhinav</title>
+  <meta name="description"
+    content="A multi-stage lead nurturing system connecting Meta Lead Forms, WhatsApp Business, email and Google Sheets. It adapts follow-ups to customer responses inst">
+  <link rel="icon" type="image/png" href="../assets/images/my-logo.png">
+  <link rel="apple-touch-icon" href="../assets/images/my-logo.png">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem("abhishek-portfolio-theme")==="dark"?"dark":"light"}catch(e){document.documentElement.dataset.theme="light"}</script>
+    <link rel="stylesheet" href="../assets/css/site.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="container nav">
+      <a class="brand-logo" href="../index.html" aria-label="Return to homepage"><img src="../assets/images/my-logo.png"
+          alt="Abhishek Abhinav logo"></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open navigation"
+        aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links" id="navLinks"><a href="../index.html">Home</a><a class="active" href="../projects.html">All
+          Projects</a><a href="../index.html#skills">Skills</a><a href="../index.html#experience">Experience</a><a
+          href="../contact.html">Contact</a></div>
+      <a class="nav-cta" href="../contact.html">Let’s Talk ↗</a>
+    </nav>
+  </header>
+  <main>
+    <section class="case-hero">
+      <div class="container">
+        <div class="breadcrumbs"><a href="../index.html">Home</a> / <a href="../projects.html">Projects</a> / Meta Lead
+          Nurture — WhatsApp + Email</div>
+        <div class="eyebrow">Lead Automation · CASE STUDY</div>
+        <h1>Meta Lead Nurture — WhatsApp + Email</h1>
+        <p class="section-intro">A multi-stage lead nurturing system connecting Meta Lead Forms, WhatsApp Business,
+          email and Google Sheets. It adapts follow-ups to customer responses instead of relying only on fixed message
+          blasts.</p>
+        <div class="tags"><span>Meta Lead Forms</span><span>n8n</span><span>WhatsApp Business / Cloud
+            API</span><span>webhooks</span><span>Google Sheets</span><span>email</span></div>
+        <div class="case-hero-actions"><a class="btn btn-primary" href="../contact.html">Discuss a similar system
+            ↗</a><a class="btn btn-secondary" href="../projects.html">← All projects</a></div>
+      </div>
+    </section>
+    <section class="section case-content">
+      <div class="container case-article">
+        <article class="article-block">
+          <div class="kicker">01 / PROJECT OVERVIEW</div>
+          <h2>What this system is designed to do</h2>
+          <p>A multi-stage lead nurturing system connecting Meta Lead Forms, WhatsApp Business, email and Google Sheets.
+            It adapts follow-ups to customer responses instead of relying only on fixed message blasts.</p>
+          <p>The solution is implemented as an n8n-led workflow using the integrations and logic described below. The
+            focus is to connect the input, processing steps and destination systems into a traceable flow. The workflow
+            combines scheduled and event-driven paths. A reusable Level 2 sub-workflow can be invoked from the scheduler
+            or the incoming-message webhook. Message IDs are used to update outgoing delivery statuses. Media messages
+            are stored for reference; the chatbot does not attempt to interpret unsupported media.</p>
+        </article>
+        <article class="article-block">
+          <div class="kicker">02 / BUSINESS CONTEXT</div>
+          <h2>The problem and objective</h2>
+          <p>Travel enquiries do not all follow the same path. A useful lead-nurturing system needs to capture the
+            enquiry, communicate across channels, recognize replies, track message status and route high-intent
+            prospects to the team without losing conversation context.</p>
+          <p><strong>Objective:</strong> Build a repeatable workflow that connects the relevant data or event to the
+            appropriate processing logic and records the result in the systems used by the team.</p>
+        </article>
+        <article class="article-block">
+          <div class="kicker">03 / IMPLEMENTATION SCOPE</div>
+          <h2>What I implemented</h2>
+          <ul class="feature-list">
+            <li>Capture leads from Meta forms</li>
+            <li>maintain a central lead record</li>
+            <li>run Level 1–5 follow-up stages</li>
+            <li>send itinerary and offer messages</li>
+            <li>alert the sales team for hot leads</li>
+            <li>receive inbound WhatsApp messages and delivery-status webhooks</li>
+            <li>match replies to existing leads</li>
+            <li>change the next action based on the customer’s response</li>
+            <li>log incoming/outgoing messages</li>
+            <li>download customer media to Drive</li>
+            <li>and activate a guarded AI chatbot in later stages with conversation history</li>
+          </ul>
+        </article>
+        <article class="article-block">
+          <div class="kicker">MULTI-STAGE CUSTOMER JOURNEY</div>
+          <h2>Level 1–5 nurture design</h2>
+          <div class="level-grid">
+            <div><b>Level 1</b><span>Initial response and lead alert logic</span></div>
+            <div><b>Level 2</b><span>Itinerary delivery and reusable follow-up path</span></div>
+            <div><b>Level 3</b><span>Itinerary follow-up</span></div>
+            <div><b>Level 4</b><span>Offer communication</span></div>
+            <div><b>Level 5</b><span>Offer-expiry reminder</span></div>
+          </div>
+          <p>Actual timing and message content depend on the configured templates and workflow conditions. The incoming
+            webhook can influence which step runs next based on the customer's reply.</p>
+        </article>
+        <article class="article-block">
+          <div class="kicker">04 / WORKFLOW ARCHITECTURE</div>
+          <h2>How the workflow operates</h2>
+          <p>The workflow combines scheduled and event-driven paths. A reusable Level 2 sub-workflow can be invoked from
+            the scheduler or the incoming-message webhook. Message IDs are used to update outgoing delivery statuses.
+            Media messages are stored for reference; the chatbot does not attempt to interpret unsupported media.</p>
+          <ol class="workflow-steps">
+            <li>
+              <div class="step-number">01</div>
+              <div>
+                <h3>Capture the enquiry</h3>
+                <p>A Meta Instant Form submission enters the workflow with the lead details that the form collects.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-number">02</div>
+              <div>
+                <h3>Create or update the lead record</h3>
+                <p>The incoming details are mapped into the central lead sheet so the team can track the lead and its
+                  current nurture stage.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-number">03</div>
+              <div>
+                <h3>Start the nurture journey</h3>
+                <p>The system uses scheduled and event-driven paths to send the configured WhatsApp and email
+                  communication across Level 1–5.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-number">04</div>
+              <div>
+                <h3>Listen for customer behaviour</h3>
+                <p>Incoming WhatsApp messages and delivery-status webhooks are received separately, matched to the
+                  relevant lead and recorded.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-number">05</div>
+              <div>
+                <h3>Choose the next action</h3>
+                <p>The response can change the next nurture stage or invoke the reusable follow-up sub-workflow. Hot
+                  intent can trigger a sales-team alert.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-number">06</div>
+              <div>
+                <h3>Maintain conversation context</h3>
+                <p>Later-stage AI chatbot handling can use conversation history and configured guardrails. Media is
+                  stored for reference; unsupported media is not treated as understood.</p>
+              </div>
+            </li>
+          </ol>
+        </article>
+
+        <article class="article-block">
+          <div class="kicker">DETAILED EXECUTION / EVENT LOGIC</div>
+          <h2>How each event changes the customer journey</h2>
+          <p>The workflow uses the lead's current action and next-action fields as the control point. This allows a
+            scheduled nurture run and an incoming WhatsApp reply to coordinate without independently sending conflicting
+            follow-ups.</p>
+          <h3>Level 1: first contact and hot-lead alert</h3>
+          <ul class="feature-list">
+            <li>When a Meta Lead Form submission is received, the lead is captured in the Lead Master and the configured
+              initial qualification logic is applied.</li>
+            <li>For a hot lead, the sales team receives an alert.</li>
+            <li>The customer receives the Level 1 WhatsApp message asking for the type of travel they are interested in,
+              along with the company profile.</li>
+            <li>The lead record stores the current action and the scheduled next action.</li>
+          </ul>
+          <h3>Level 2: immediate response path or 12-hour fallback</h3>
+          <ul class="feature-list">
+            <li>If the customer replies while Level 1 is the current action, the webhook invokes Level 2 immediately.
+            </li>
+            <li>If no reply arrives, the scheduler sends the itinerary after the revised 12-hour delay from Level 1.
+            </li>
+            <li>Level 2 is implemented as a reusable sub-workflow and can be called from both the scheduled workflow and
+              the incoming-message webhook.</li>
+          </ul>
+          <h3>Levels 3–5: scheduled nurture actions</h3>
+          <ul class="feature-list">
+            <li>Level 3 sends an itinerary follow-up.</li>
+            <li>Level 4 sends an exclusive offer.</li>
+            <li>Level 5 sends an offer-expiry intimation.</li>
+            <li>The scheduler reads the next-action type and time from the lead record to decide which action is due.
+            </li>
+          </ul>
+          <h3>Webhook handling: inbound messages and outgoing statuses</h3>
+          <ul class="feature-list">
+            <li>The webhook handler receives incoming WhatsApp messages and outgoing message-status callbacks.</li>
+            <li>Incoming and outgoing events are written to separate sheets: Incoming Messages and Outgoing Statuses.
+            </li>
+            <li>For a status callback, the message ID identifies the existing status row; the relevant status column is
+              updated on that same row.</li>
+            <li>For an incoming message, the sender's phone number is checked against the Lead Master. Known leads are
+              logged with their lead details and relevant context; unknown senders are appended as new incoming-message
+              records.</li>
+          </ul>
+          <h3>Response-driven branching rules</h3>
+          <ul class="feature-list">
+            <li>Reply during Level 1: trigger Level 2 from the webhook flow immediately rather than waiting for the
+              12-hour schedule.</li>
+            <li>Reply during Level 2: update the next action to Level 4, revise its time and skip Level 3 for that path.
+            </li>
+            <li>Reply during Level 3 or Level 4: reduce the time until the next scheduled action according to the
+              configured rule.</li>
+          </ul>
+          <h3>Media handling and later-stage AI assistant</h3>
+          <ul class="feature-list">
+            <li>If a customer sends media, the workflow downloads it, saves it to Google Drive and records the Drive
+              link in the sheet for team reference.</li>
+            <li>From Level 3 onward, eligible customer replies can activate the AI chatbot. It responds to questions and
+              attempts to collect required trip information, then updates the lead sheet.</li>
+            <li>The chatbot checks the complete conversation history before responding and logs its AI response for
+              traceability and personalization.</li>
+            <li>The AI does not claim to inspect unsupported media. If a media message has a caption, it can respond
+              using the caption; without a caption, it acknowledges receipt and indicates that the team will get back to
+              the customer.</li>
+            <li>The assistant is bounded: it should collect relevant information, avoid unnecessary conversation and not
+              provide risky or unsupported commitments.</li>
+          </ul>
+        </article>
+        <article class="article-block">
+          <div class="kicker">05 / SCREENSHOT EVIDENCE</div>
+          <h2>Project screenshots</h2>
+          <p>Replace these placeholders with genuine, sanitized screenshots from the actual project. Suggested evidence:
+            n8n workflow, sanitized lead-sheet view, WhatsApp test conversation, webhook execution, status tracking.</p>
+          <div class="screenshot-slot" style="padding:0; overflow:hidden;">
+            <img
+                src="../assets/images/projects/meta-lead-nurture-primary.png"
+                alt="Meta lead nurturing automation workflow with WhatsApp and email stages"
+                style="display:block; width:100%; height:auto; border-radius:12px;">
+        </div>
+          <div class="screenshot-slot screenshot-slot-secondary" style="padding:0; overflow:hidden;">
+            <img
+                src="../assets/images/projects/meta-lead-nurture-output.png"
+                alt="Lead Master showing lead stages and follow-up status"
+                style="display:block; width:100%; height:auto; border-radius:12px;">
+        </div>
+        </article>
+        <article class="article-block">
+          <div class="kicker">06 / TECHNOLOGY STACK</div>
+          <h2>Tools and integrations</h2>
+          <div class="case-stack"><span>Meta Lead Forms</span><span>n8n</span><span>WhatsApp Business / Cloud
+              API</span><span>webhooks</span><span>Google Sheets</span><span>email</span></div>
+        </article>
+        <article class="article-block">
+          <div class="kicker">07 / SCOPE & STATUS</div>
+          <h2>Implementation notes</h2>
+          <p>Completed workflow components are described in the project notes. Present only the tested stages and
+            integrations in the public demo; do not expose phone numbers, customer data, templates or credentials.</p>
+        </article>
+        <article class="article-block">
+          <div class="kicker">08 / BUSINESS VALUE</div>
+          <h2>Why this automation matters</h2>
+          <p>This system connects steps that would otherwise require people to move information manually between tools
+            or repeatedly check operational data. It provides a more structured and traceable process. The exact
+            operational impact depends on the team's usage, data quality and the workflow configuration; no unverified
+            performance or financial results are claimed here.</p>
+        </article>
+        <!-- FUTURE VIDEO EMBED PLACEHOLDER
+    When the project walkthrough is ready, uncomment and replace VIDEO_ID:
+    <section class="case-video-section">
+      <div class="container">
+        <div class="kicker">PROJECT WALKTHROUGH</div>
+        <h2>Watch the workflow in action</h2>
+        <div class="case-video-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID"
+            title="Meta Lead Nurture — WhatsApp + Email walkthrough" loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+    -->
+        <div class="case-bottom-nav"><a class="btn btn-secondary" href="../projects.html">← Explore all projects</a><a
+            class="btn btn-primary" href="../contact.html">Contact about a similar project ↗</a></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-inner"><span>© <span id="year"></span> Abhishek Abhinav</span><a
+        href="../index.html">Back to homepage ↑</a></div>
+  </footer>
+  <script src="../assets/js/site.js"></script>
+</body>
+
+</html>

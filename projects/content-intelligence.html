@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>WakeUp by TR — Content Intelligence &amp; Reference Content | Abhishek Abhinav</title>
+  <meta name="description"
+    content="A content-planning intelligence pipeline designed to recommend what the team should create next by combining historical post performance, audience interest">
+  <link rel="icon" type="image/png" href="../assets/images/my-logo.png">
+  <link rel="apple-touch-icon" href="../assets/images/my-logo.png">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem("abhishek-portfolio-theme")==="dark"?"dark":"light"}catch(e){document.documentElement.dataset.theme="light"}</script>
+    <link rel="stylesheet" href="../assets/css/site.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="container nav">
+      <a class="brand-logo" href="../index.html" aria-label="Return to homepage"><img src="../assets/images/my-logo.png"
+          alt="Abhishek Abhinav logo"></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open navigation"
+        aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links" id="navLinks"><a href="../index.html">Home</a><a class="active" href="../projects.html">All
+          Projects</a><a href="../index.html#skills">Skills</a><a href="../index.html#experience">Experience</a><a
+          href="../contact.html">Contact</a></div>
+      <a class="nav-cta" href="../contact.html">Let’s Talk ↗</a>
+    </nav>
+  </header>
+  <main>
+    <section class="case-hero">
+      <div class="container">
+        <div class="breadcrumbs"><a href="../index.html">Home</a> / <a href="../projects.html">Projects</a> / WakeUp by
+          TR — Content Intelligence &amp; Reference Content</div>
+        <div class="eyebrow">Content Intelligence · CASE STUDY</div>
+        <h1>WakeUp by TR — Content Intelligence &amp; Reference Content</h1>
+        <p class="section-intro">A content-planning intelligence pipeline designed to recommend what the team should
+          create next by combining historical post performance, audience interests, search trends and real creator
+          content references.</p>
+        <div class="tags"><span>n8n</span><span>SerpAPI</span><span>Google Trends</span><span>Google
+            Sheets</span><span>AI-assisted content generation workflow</span></div>
+        <div class="case-hero-actions"><a class="btn btn-primary" href="../contact.html">Discuss a similar system
+            ↗</a><a class="btn btn-secondary" href="../projects.html">← All projects</a></div>
+      </div>
+    </section>
+    <section class="section case-content">
+      <div class="container case-article">
+        <article class="article-block">
+          <div class="kicker">01 / PROJECT OVERVIEW</div>
+          <h2>What this system is designed to do</h2>
+          <p>A content-planning intelligence pipeline designed to recommend what the team should create next by
+            combining historical post performance, audience interests, search trends and real creator content
+            references.</p>
+          <p>The solution is implemented as an n8n-led workflow using the integrations and logic described below. The
+            focus is to connect the input, processing steps and destination systems into a traceable flow. The
+            reference-content stage discovers actual Instagram Reels, posts or other creator content related to
+            shortlisted topics. These examples act as creative references for the team to study—not as content to copy.
+            The pipeline connects its ranked recommendations to the broader content workflow.</p>
+        </article>
+        <article class="article-block">
+          <div class="kicker">02 / BUSINESS CONTEXT</div>
+          <h2>The problem and objective</h2>
+          <p>A content team needs more than a list of trending keywords. It needs to decide which topics fit its
+            audience and historical performance, understand whether interest is rising, and find real creator examples
+            that can inform the creative approach.</p>
+          <p><strong>Objective:</strong> Build a repeatable workflow that connects the relevant data or event to the
+            appropriate processing logic and records the result in the systems used by the team.</p>
+        </article>
+        <article class="article-block">
+          <div class="kicker">03 / IMPLEMENTATION SCOPE</div>
+          <h2>What I implemented</h2>
+          <ul class="feature-list">
+            <li>Analyze historical post performance and audience interests</li>
+            <li>process category keywords</li>
+            <li>retrieve weekly trend data for the previous year through SerpAPI and Google Trends</li>
+            <li>batch five keywords per request</li>
+            <li>calculate average trend, recent average, growth rate and trend score</li>
+            <li>score historical content fit and audience relevance</li>
+            <li>combine signals into a weighted opportunity score</li>
+            <li>rank and select the top ten opportunities</li>
+            <li>prepare hooks, scripts, captions, hashtags and CTAs</li>
+          </ul>
+        </article>
+        <article class="article-block">
+          <div class="kicker">REFERENCE CONTENT DISCOVERY</div>
+          <h2>From topic opportunity to real-world examples</h2>
+          <p>A defining part of this system is the reference-content stage. Once a topic is shortlisted, the workflow
+            discovers actual Instagram Reels, posts or other creator content related to that topic. These are real
+            examples the team can open and study for presentation style, framing, hooks and creative direction.</p>
+          <p>The intention is not to copy another creator's work. It is to give the content team relevant examples while
+            deciding how to approach the topic in its own voice.</p>
+        </article>
+        <article class="article-block">
+          <div class="kicker">04 / WORKFLOW ARCHITECTURE</div>
+          <h2>How the workflow operates</h2>
+          <p>The reference-content stage discovers actual Instagram Reels, posts or other creator content related to
+            shortlisted topics. These examples act as creative references for the team to study—not as content to copy.
+            The pipeline connects its ranked recommendations to the broader content workflow.</p>
+          <ol class="workflow-steps">
+            <li>
+              <div class="step-number">01</div>
+              <div>
+                <h3>Collect the content context</h3>
+                <p>Bring together historical post performance, audience interests, category definitions and topic
+                  keywords.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-number">02</div>
+              <div>
+                <h3>Research topic momentum</h3>
+                <p>Use SerpAPI and Google Trends to collect weekly trend signals. Keywords are processed in batches of
+                  five.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-number">03</div>
+              <div>
+                <h3>Calculate opportunity signals</h3>
+                <p>Calculate average trend, recent average, growth rate and trend score, then evaluate historical
+                  content fit and audience relevance.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-number">04</div>
+              <div>
+                <h3>Rank content opportunities</h3>
+                <p>Combine the signals into a weighted opportunity score and select the strongest ten topics for
+                  consideration.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-number">05</div>
+              <div>
+                <h3>Find real creative references</h3>
+                <p>Discover actual Instagram Reels, posts or other creator content on shortlisted topics so the team can
+                  study relevant examples.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-number">06</div>
+              <div>
+                <h3>Prepare content directions</h3>
+                <p>Produce structured recommendations including hooks, scripts, captions, hashtags and CTAs for the
+                  wider content workflow.</p>
+              </div>
+            </li>
+          </ol>
+        </article>
+        <article class="article-block">
+          <div class="kicker">DETAILED IMPLEMENTATION</div>
+          <h2>What the workflow actually does</h2>
+          <p>The reference-content stage discovers actual Instagram Reels, posts or other creator content related to
+            shortlisted topics. These examples act as creative references for the team to study—not as content to copy.
+            The pipeline connects its ranked recommendations to the broader content workflow.</p>
+          <h3>Implementation activities and workflow capabilities</h3>
+          <ul class="feature-list">
+            <li>Historical post-performance analysis.</li>
+            <li>audience-interest processing.</li>
+            <li>category-wise keyword inputs.</li>
+            <li>SerpAPI and Google Trends weekly trend retrieval for the previous year.</li>
+            <li>five-keyword request batching.</li>
+            <li>average trend, recent average, growth rate and trend-score calculations.</li>
+            <li>historical content-fit scoring.</li>
+            <li>audience-interest scoring.</li>
+            <li>unified dataset merging.</li>
+            <li>weighted opportunity score.</li>
+            <li>ranked content opportunities and top-ten selection.</li>
+            <li>reference discovery for actual Instagram Reels, Instagram posts or other creator content on shortlisted
+              topics.</li>
+            <li>reference examples for creative research rather than copying.</li>
+            <li>structured hooks, scripts, captions, hashtags and calls to action.</li>
+            <li>integration with the existing automated content workflow.</li>
+          </ul>
+        </article>
+        <article class="article-block">
+          <div class="kicker">05 / SCREENSHOT EVIDENCE</div>
+          <h2>Project screenshots</h2>
+          <p>Replace these placeholders with genuine, sanitized screenshots from the actual project. Suggested evidence:
+            Trend-data sheet, scoring logic, top-ten opportunities, real reference-post examples.</p>
+          <div class="screenshot-slot" style="padding:0; overflow:hidden;">
+            <img
+                src="../assets/images/projects/content-intelligence-primary.jpg"
+                alt="Content Intelligence automation workflow"
+                style="display:block; width:100%; height:auto; border-radius:12px;">
+          </div>
+          <div class="screenshot-slot screenshot-slot-secondary" style="padding:0; overflow:hidden;">
+              <img
+                  src="../assets/images/projects/content-intelligence-output.png"
+                  alt="Content Intelligence research and trend analysis output"
+                  style="display:block; width:100%; height:auto; border-radius:12px;">
+          </div>
+        </article>
+        <article class="article-block">
+          <div class="kicker">06 / TECHNOLOGY STACK</div>
+          <h2>Tools and integrations</h2>
+          <div class="case-stack"><span>n8n</span><span>SerpAPI</span><span>Google Trends</span><span>Google
+              Sheets</span><span>AI-assisted content generation workflow</span></div>
+        </article>
+        <article class="article-block">
+          <div class="kicker">07 / SCOPE & STATUS</div>
+          <h2>Implementation notes</h2>
+          <p>The purpose is to identify promising topics and relevant reference examples, not merely to display keyword
+            trends. Reference links should be checked for availability before presenting them as live examples.</p>
+        </article>
+        <article class="article-block">
+          <div class="kicker">08 / BUSINESS VALUE</div>
+          <h2>Why this automation matters</h2>
+          <p>This system connects steps that would otherwise require people to move information manually between tools
+            or repeatedly check operational data. It provides a more structured and traceable process. The exact
+            operational impact depends on the team's usage, data quality and the workflow configuration; no unverified
+            performance or financial results are claimed here.</p>
+        </article>
+        <!-- FUTURE VIDEO EMBED PLACEHOLDER
+    When the project walkthrough is ready, uncomment and replace VIDEO_ID:
+    <section class="case-video-section">
+      <div class="container">
+        <div class="kicker">PROJECT WALKTHROUGH</div>
+        <h2>Watch the workflow in action</h2>
+        <div class="case-video-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID"
+            title="WakeUp by TR — Content Intelligence &amp; Reference Content walkthrough" loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+    -->
+        <div class="case-bottom-nav"><a class="btn btn-secondary" href="../projects.html">← Explore all projects</a><a
+            class="btn btn-primary" href="../contact.html">Contact about a similar project ↗</a></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-inner"><span>© <span id="year"></span> Abhishek Abhinav</span><a
+        href="../index.html">Back to homepage ↑</a></div>
+  </footer>
+  <script src="../assets/js/site.js"></script>
+</body>
+
+</html>

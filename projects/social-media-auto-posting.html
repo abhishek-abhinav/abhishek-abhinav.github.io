@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Social Media Auto Posting Engine | Abhishek Abhinav</title>
+  <meta name="description"
+    content="A scheduled publishing engine that retrieves media from Google Drive and publishes content to connected social channels for multiple brands.">
+  <link rel="icon" type="image/png" href="../assets/images/my-logo.png">
+  <link rel="apple-touch-icon" href="../assets/images/my-logo.png">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem("abhishek-portfolio-theme")==="dark"?"dark":"light"}catch(e){document.documentElement.dataset.theme="light"}</script>
+    <link rel="stylesheet" href="../assets/css/site.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="container nav">
+      <a class="brand-logo" href="../index.html" aria-label="Return to homepage"><img src="../assets/images/my-logo.png"
+          alt="Abhishek Abhinav logo"></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open navigation"
+        aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links" id="navLinks"><a href="../index.html">Home</a><a class="active" href="../projects.html">All
+          Projects</a><a href="../index.html#skills">Skills</a><a href="../index.html#experience">Experience</a><a
+          href="../contact.html">Contact</a></div>
+      <a class="nav-cta" href="../contact.html">Let’s Talk ↗</a>
+    </nav>
+  </header>
+  <main>
+    <section class="case-hero">
+      <div class="container">
+        <div class="breadcrumbs"><a href="../index.html">Home</a> / <a href="../projects.html">Projects</a> / Social
+          Media Auto Posting Engine</div>
+        <div class="eyebrow">Social Media Automation · CASE STUDY</div>
+        <h1>Social Media Auto Posting Engine</h1>
+        <p class="section-intro">A scheduled publishing engine that retrieves media from Google Drive and publishes
+          content to connected social channels for multiple brands.</p>
+        <div class="tags"><span>n8n</span><span>Google Drive</span><span>Meta / social platform
+            integrations</span><span>Google Sheets</span></div>
+        <div class="case-hero-actions"><a class="btn btn-primary" href="../contact.html">Discuss a similar system
+            ↗</a><a class="btn btn-secondary" href="../projects.html">← All projects</a></div>
+      </div>
+    </section>
+    <section class="section case-content">
+      <div class="container case-article">
+        <article class="article-block">
+          <div class="kicker">01 / PROJECT OVERVIEW</div>
+          <h2>What this system is designed to do</h2>
+          <p>A scheduled publishing engine that retrieves media from Google Drive and publishes content to connected
+            social channels for multiple brands.</p>
+          <p>The solution is implemented as an n8n-led workflow using the integrations and logic described below. The
+            focus is to connect the input, processing steps and destination systems into a traceable flow. The workflow
+            uses filename conventions to decide whether assets should be grouped into a carousel or published
+            individually, then records the publishing result for monitoring.</p>
+        </article>
+        <article class="article-block">
+          <div class="kicker">02 / BUSINESS CONTEXT</div>
+          <h2>The problem and objective</h2>
+          <p>Publishing for multiple brands involves recurring schedules, media retrieval, caption handling and a
+            reliable record of what was published. Carousel assets also need to be grouped correctly.</p>
+          <p><strong>Objective:</strong> Build a repeatable workflow that connects the relevant data or event to the
+            appropriate processing logic and records the result in the systems used by the team.</p>
+        </article>
+        <article class="article-block">
+          <div class="kicker">03 / IMPLEMENTATION SCOPE</div>
+          <h2>What I implemented</h2>
+          <ul class="feature-list">
+            <li>Fetch images and videos from Drive</li>
+            <li>apply brand- and media-specific posting schedules</li>
+            <li>publish content</li>
+            <li>record status, post URL, media ID, caption and related notes in a tracking sheet</li>
+            <li>detect numbered image sequences such as 3.1.jpg, 3.2.jpg and 3.3.jpg as one carousel while treating
+              ordinary filenames as separate posts</li>
+          </ul>
+        </article>
+
+        <article class="article-block">
+          <div class="kicker">04 / WORKFLOW ARCHITECTURE</div>
+          <h2>How the workflow operates</h2>
+          <p>The workflow uses filename conventions to decide whether assets should be grouped into a carousel or
+            published individually, then records the publishing result for monitoring.</p>
+          <ol class="workflow-steps">
+            <li>
+              <div class="step-number">01</div>
+              <div>
+                <h3>Read the publishing schedule</h3>
+                <p>The workflow checks the configured brand, media type and scheduled publishing time.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-number">02</div>
+              <div>
+                <h3>Retrieve media from Drive</h3>
+                <p>Eligible images and videos are fetched from the appropriate Google Drive location.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-number">03</div>
+              <div>
+                <h3>Detect carousel groups</h3>
+                <p>Numbered filenames such as 3.1.jpg, 3.2.jpg and 3.3.jpg are grouped as one carousel; ordinary
+                  filenames are handled as separate posts.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-number">04</div>
+              <div>
+                <h3>Publish to the connected channel</h3>
+                <p>The selected media and caption are passed to the relevant publishing integration.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-number">05</div>
+              <div>
+                <h3>Record the publishing result</h3>
+                <p>The tracking sheet stores status, published URL, media ID, caption and related details.</p>
+              </div>
+            </li>
+          </ol>
+        </article>
+        <article class="article-block">
+          <div class="kicker">DETAILED IMPLEMENTATION</div>
+          <h2>What the workflow actually does</h2>
+          <p>The workflow uses filename conventions to decide whether assets should be grouped into a carousel or
+            published individually, then records the publishing result for monitoring.</p>
+          <h3>Implementation activities and workflow capabilities</h3>
+          <ul class="feature-list">
+            <li>Google Drive image and video retrieval.</li>
+            <li>multi-brand scheduling for Furniquin, World Eye Trip and X-Lent Tea.</li>
+            <li>Furniquin image 9 AM and video 9 PM.</li>
+            <li>World Eye Trip image 9 PM and video 6 PM.</li>
+            <li>X-Lent Tea image 6 PM and video 9 AM.</li>
+            <li>filename-based carousel grouping.</li>
+            <li>decimal filenames such as 3.1.jpg, 3.2.jpg and 3.3.jpg grouped into one carousel.</li>
+            <li>ordinary filenames such as 2.png, 3.png and 4.png published as separate posts.</li>
+            <li>social publishing.</li>
+            <li>success status, post URL, media ID, caption and related notes recorded in Google Sheets.</li>
+          </ul>
+        </article>
+        <article class="article-block">
+          <div class="kicker">05 / SCREENSHOT EVIDENCE</div>
+          <h2>Project screenshots</h2>
+          <p>Replace these placeholders with genuine, sanitized screenshots from the actual project. Suggested evidence:
+            Drive media folder structure, carousel grouping example, publishing execution, tracking sheet.</p>
+          <div class="screenshot-slot" style="padding:0; overflow:hidden;">
+            <img
+                src="../assets/images/projects/social-media-auto-posting-primary.png"
+                alt="Multi-brand social media automatic posting workflow in n8n"
+                style="display:block; width:100%; height:auto; border-radius:12px;">
+        </div>
+          <div class="screenshot-slot screenshot-slot-secondary" style="padding:0; overflow:hidden;">
+            <img
+                src="../assets/images/projects/social-media-auto-posting-output.png"
+                alt="Social media published post and automated publishing tracking record"
+                style="display:block; width:100%; height:auto; border-radius:12px;">
+        </div>
+        </article>
+        <article class="article-block">
+          <div class="kicker">06 / TECHNOLOGY STACK</div>
+          <h2>Tools and integrations</h2>
+          <div class="case-stack"><span>n8n</span><span>Google Drive</span><span>Meta / social platform
+              integrations</span><span>Google Sheets</span></div>
+        </article>
+        <article class="article-block">
+          <div class="kicker">07 / SCOPE & STATUS</div>
+          <h2>Implementation notes</h2>
+          <p>The source project notes mention Furniquin, World Eye Trip and X-Lent Tea. Public pages should avoid
+            revealing private account identifiers.</p>
+        </article>
+        <article class="article-block">
+          <div class="kicker">08 / BUSINESS VALUE</div>
+          <h2>Why this automation matters</h2>
+          <p>This system connects steps that would otherwise require people to move information manually between tools
+            or repeatedly check operational data. It provides a more structured and traceable process. The exact
+            operational impact depends on the team's usage, data quality and the workflow configuration; no unverified
+            performance or financial results are claimed here.</p>
+        </article>
+        <!-- FUTURE VIDEO EMBED PLACEHOLDER
+    When the project walkthrough is ready, uncomment and replace VIDEO_ID:
+    <section class="case-video-section">
+      <div class="container">
+        <div class="kicker">PROJECT WALKTHROUGH</div>
+        <h2>Watch the workflow in action</h2>
+        <div class="case-video-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID"
+            title="Social Media Auto Posting Engine walkthrough" loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+    -->
+        <div class="case-bottom-nav"><a class="btn btn-secondary" href="../projects.html">← Explore all projects</a><a
+            class="btn btn-primary" href="../contact.html">Contact about a similar project ↗</a></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-inner"><span>© <span id="year"></span> Abhishek Abhinav</span><a
+        href="../index.html">Back to homepage ↑</a></div>
+  </footer>
+  <script src="../assets/js/site.js"></script>
+</body>
+
+</html>

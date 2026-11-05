@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI Helpdesk Support Executive | Abhishek Abhinav</title>
+  <meta name="description"
+    content="An email-support workflow that reviews incoming support requests and attached screenshots, prepares a client-ready solution draft and shares the issue summ">
+  <link rel="icon" type="image/png" href="../assets/images/my-logo.png">
+  <link rel="apple-touch-icon" href="../assets/images/my-logo.png">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem("abhishek-portfolio-theme")==="dark"?"dark":"light"}catch(e){document.documentElement.dataset.theme="light"}</script>
+    <link rel="stylesheet" href="../assets/css/site.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="container nav">
+      <a class="brand-logo" href="../index.html" aria-label="Return to homepage"><img src="../assets/images/my-logo.png"
+          alt="Abhishek Abhinav logo"></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open navigation"
+        aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links" id="navLinks"><a href="../index.html">Home</a><a class="active" href="../projects.html">All
+          Projects</a><a href="../index.html#skills">Skills</a><a href="../index.html#experience">Experience</a><a
+          href="../contact.html">Contact</a></div>
+      <a class="nav-cta" href="../contact.html">Let’s Talk ↗</a>
+    </nav>
+  </header>
+  <main>
+    <section class="case-hero">
+      <div class="container">
+        <div class="breadcrumbs"><a href="../index.html">Home</a> / <a href="../projects.html">Projects</a> / AI
+          Helpdesk Support Executive</div>
+        <div class="eyebrow">AI-Assisted Support · CASE STUDY</div>
+        <h1>AI Helpdesk Support Executive</h1>
+        <p class="section-intro">An email-support workflow that reviews incoming support requests and attached
+          screenshots, prepares a client-ready solution draft and shares the issue summary with the team for review.</p>
+        <div class="tags"><span>n8n</span><span>email integration</span><span>Vertex AI</span><span>attachment
+            processing</span></div>
+        <div class="case-hero-actions"><a class="btn btn-primary" href="../contact.html">Discuss a similar system
+            ↗</a><a class="btn btn-secondary" href="../projects.html">← All projects</a></div>
+      </div>
+    </section>
+    <section class="section case-content">
+      <div class="container case-article">
+        <article class="article-block">
+          <div class="kicker">01 / PROJECT OVERVIEW</div>
+          <h2>What this system is designed to do</h2>
+          <p>An email-support workflow that reviews incoming support requests and attached screenshots, prepares a
+            client-ready solution draft and shares the issue summary with the team for review.</p>
+          <p>The solution is implemented as an n8n-led workflow using the integrations and logic described below. The
+            focus is to connect the input, processing steps and destination systems into a traceable flow. The workflow
+            prepares a structured support handoff: incoming issue context, screenshot-based evidence where available and
+            a proposed response for human review.</p>
+        </article>
+        <article class="article-block">
+          <div class="kicker">02 / BUSINESS CONTEXT</div>
+          <h2>The problem and objective</h2>
+          <p>Support requests can arrive with unstructured descriptions and screenshots. The team benefits from a
+            prepared issue summary and suggested response, while retaining human review before sending a final answer.
+          </p>
+          <p><strong>Objective:</strong> Build a repeatable workflow that connects the relevant data or event to the
+            appropriate processing logic and records the result in the systems used by the team.</p>
+        </article>
+        <article class="article-block">
+          <div class="kicker">03 / IMPLEMENTATION SCOPE</div>
+          <h2>What I implemented</h2>
+          <ul class="feature-list">
+            <li>Fetch incoming support emails</li>
+            <li>inspect message content and attached screenshots</li>
+            <li>analyze the reported issue</li>
+            <li>generate a clear proposed solution</li>
+            <li>send the issue summary and draft response to the team for review before it is sent to the client</li>
+          </ul>
+        </article>
+
+        <article class="article-block">
+          <div class="kicker">04 / WORKFLOW ARCHITECTURE</div>
+          <h2>How the workflow operates</h2>
+          <p>The workflow prepares a structured support handoff: incoming issue context, screenshot-based evidence where
+            available and a proposed response for human review.</p>
+          <ol class="workflow-steps">
+            <li>
+              <div class="step-number">01</div>
+              <div>
+                <h3>Receive the support email</h3>
+                <p>The workflow retrieves the incoming support request and its message content.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-number">02</div>
+              <div>
+                <h3>Inspect available evidence</h3>
+                <p>Where screenshots are attached, the workflow processes the available attachment context alongside the
+                  issue description.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-number">03</div>
+              <div>
+                <h3>Prepare an AI-assisted analysis</h3>
+                <p>The AI step reviews the reported issue and prepares a proposed explanation or solution.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-number">04</div>
+              <div>
+                <h3>Create a human-review handoff</h3>
+                <p>The issue summary and draft response are sent to the team for review before any client-facing
+                  response is delivered.</p>
+              </div>
+            </li>
+          </ol>
+        </article>
+        <article class="article-block">
+          <div class="kicker">DETAILED IMPLEMENTATION</div>
+          <h2>What the workflow actually does</h2>
+          <p>The workflow prepares a structured support handoff: incoming issue context, screenshot-based evidence where
+            available and a proposed response for human review.</p>
+          <h3>Implementation activities and workflow capabilities</h3>
+          <ul class="feature-list">
+            <li>Incoming support email retrieval.</li>
+            <li>email body and attached screenshot collection.</li>
+            <li>issue analysis using the configured Vertex AI step.</li>
+            <li>interpretation of screenshot evidence where available.</li>
+            <li>generation of a clear proposed solution.</li>
+            <li>preparation of a client-ready response draft.</li>
+            <li>structured issue summary.</li>
+            <li>sending the summary and draft to the internal team for review before a final customer response.</li>
+          </ul>
+        </article>
+        <article class="article-block">
+          <div class="kicker">05 / SCREENSHOT EVIDENCE</div>
+          <h2>Project screenshots</h2>
+          <p>Replace these placeholders with genuine, sanitized screenshots from the actual project. Suggested evidence:
+            Email trigger, attachment-processing step, AI analysis, team review email.</p>
+          <div class="screenshot-slot" style="padding:0; overflow:hidden;">
+            <img
+                src="../assets/images/projects/ai-helpdesk-primary.png"
+                alt="AI helpdesk email processing and document analysis workflow in n8n"
+                style="display:block; width:100%; height:auto; border-radius:12px;">
+        </div>
+         <div class="screenshot-slot screenshot-slot-secondary" style="padding:0; overflow:hidden;">
+            <img
+                src="../assets/images/projects/ai-helpdesk-output.png"
+                alt="AI-generated helpdesk analysis and internal team review email"
+                style="display:block; width:100%; height:auto; border-radius:12px;">
+        </div>
+        </article>
+        <article class="article-block">
+          <div class="kicker">06 / TECHNOLOGY STACK</div>
+          <h2>Tools and integrations</h2>
+          <div class="case-stack"><span>n8n</span><span>email integration</span><span>Vertex AI</span><span>attachment
+              processing</span></div>
+        </article>
+        <article class="article-block">
+          <div class="kicker">07 / SCOPE & STATUS</div>
+          <h2>Implementation notes</h2>
+          <p>The source describes a review step before client delivery. Do not claim that the AI independently sends
+            final answers to customers.</p>
+        </article>
+        <article class="article-block">
+          <div class="kicker">08 / BUSINESS VALUE</div>
+          <h2>Why this automation matters</h2>
+          <p>This system connects steps that would otherwise require people to move information manually between tools
+            or repeatedly check operational data. It provides a more structured and traceable process. The exact
+            operational impact depends on the team's usage, data quality and the workflow configuration; no unverified
+            performance or financial results are claimed here.</p>
+        </article>
+        <!-- FUTURE VIDEO EMBED PLACEHOLDER
+    When the project walkthrough is ready, uncomment and replace VIDEO_ID:
+    <section class="case-video-section">
+      <div class="container">
+        <div class="kicker">PROJECT WALKTHROUGH</div>
+        <h2>Watch the workflow in action</h2>
+        <div class="case-video-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID"
+            title="AI Helpdesk Support Executive walkthrough" loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+    -->
+        <div class="case-bottom-nav"><a class="btn btn-secondary" href="../projects.html">← Explore all projects</a><a
+            class="btn btn-primary" href="../contact.html">Contact about a similar project ↗</a></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-inner"><span>© <span id="year"></span> Abhishek Abhinav</span><a
+        href="../index.html">Back to homepage ↑</a></div>
+  </footer>
+  <script src="../assets/js/site.js"></script>
+</body>
+
+</html>

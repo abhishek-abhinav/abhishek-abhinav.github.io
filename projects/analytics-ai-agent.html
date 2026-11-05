@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>WakeUp by TR — Analytics AI Agent | Abhishek Abhinav</title>
+  <meta name="description"
+    content="A conversational analytics proof of concept that lets a user ask natural-language questions about business Instagram data stored in Google Sheets.">
+  <link rel="icon" type="image/png" href="../assets/images/my-logo.png">
+  <link rel="apple-touch-icon" href="../assets/images/my-logo.png">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem("abhishek-portfolio-theme")==="dark"?"dark":"light"}catch(e){document.documentElement.dataset.theme="light"}</script>
+    <link rel="stylesheet" href="../assets/css/site.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="container nav">
+      <a class="brand-logo" href="../index.html" aria-label="Return to homepage"><img src="../assets/images/my-logo.png"
+          alt="Abhishek Abhinav logo"></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open navigation"
+        aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links" id="navLinks"><a href="../index.html">Home</a><a class="active" href="../projects.html">All
+          Projects</a><a href="../index.html#skills">Skills</a><a href="../index.html#experience">Experience</a><a
+          href="../contact.html">Contact</a></div>
+      <a class="nav-cta" href="../contact.html">Let’s Talk ↗</a>
+    </nav>
+  </header>
+  <main>
+    <section class="case-hero">
+      <div class="container">
+        <div class="breadcrumbs"><a href="../index.html">Home</a> / <a href="../projects.html">Projects</a> / WakeUp by
+          TR — Analytics AI Agent</div>
+        <div class="eyebrow">AI Agent / Proof of Concept · CASE STUDY</div>
+        <h1>WakeUp by TR — Analytics AI Agent</h1>
+        <p class="section-intro">A conversational analytics proof of concept that lets a user ask natural-language
+          questions about business Instagram data stored in Google Sheets.</p>
+        <div class="tags"><span>n8n Chat Interface</span><span>n8n AI Agent</span><span>OpenAI model</span><span>Google
+            Sheets tools</span></div>
+        <div class="case-hero-actions"><a class="btn btn-primary" href="../contact.html">Discuss a similar system
+            ↗</a><a class="btn btn-secondary" href="../projects.html">← All projects</a></div>
+      </div>
+    </section>
+    <section class="section case-content">
+      <div class="container case-article">
+        <article class="article-block">
+          <div class="kicker">01 / PROJECT OVERVIEW</div>
+          <h2>What this system is designed to do</h2>
+          <p>A conversational analytics proof of concept that lets a user ask natural-language questions about business
+            Instagram data stored in Google Sheets.</p>
+          <p>The solution is implemented as an n8n-led workflow using the integrations and logic described below. The
+            focus is to connect the input, processing steps and destination systems into a traceable flow. The agent
+            selects relevant spreadsheet tools based on the question and uses their returned data to formulate an
+            answer. This is a proof of concept for conversational self-service analytics.</p>
+        </article>
+        <article class="article-block">
+          <div class="kicker">02 / BUSINESS CONTEXT</div>
+          <h2>The problem and objective</h2>
+          <p>Analytics stored in multiple sheets can require manual searching and comparison. This proof of concept
+            explores a conversational interface for asking questions against those datasets.</p>
+          <p><strong>Objective:</strong> Build a repeatable workflow that connects the relevant data or event to the
+            appropriate processing logic and records the result in the systems used by the team.</p>
+        </article>
+        <article class="article-block">
+          <div class="kicker">03 / IMPLEMENTATION SCOPE</div>
+          <h2>What I implemented</h2>
+          <ul class="feature-list">
+            <li>Configure a chat trigger and AI Agent</li>
+            <li>connect the model</li>
+            <li>provide structured descriptions for five analytics sheet tools</li>
+            <li>retrieve relevant Posts, Ads, Audience and Page Growth information</li>
+            <li>test ranking, comparison and factual analytics questions</li>
+            <li>validate responses against the reporting sheets</li>
+          </ul>
+        </article>
+
+        <article class="article-block">
+          <div class="kicker">04 / WORKFLOW ARCHITECTURE</div>
+          <h2>How the workflow operates</h2>
+          <p>The agent selects relevant spreadsheet tools based on the question and uses their returned data to
+            formulate an answer. This is a proof of concept for conversational self-service analytics.</p>
+          <ol class="workflow-steps">
+            <li>
+              <div class="step-number">01</div>
+              <div>
+                <h3>Receive a natural-language question</h3>
+                <p>The chat trigger receives a question from the user.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-number">02</div>
+              <div>
+                <h3>Interpret the request</h3>
+                <p>The n8n AI Agent uses its connected model and structured tool descriptions to decide which
+                  spreadsheet data is relevant.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-number">03</div>
+              <div>
+                <h3>Retrieve the source data</h3>
+                <p>The agent can call the configured Google Sheets tools covering posts, ads, audience, page growth and
+                  related analytics.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-number">04</div>
+              <div>
+                <h3>Compose a grounded response</h3>
+                <p>The agent uses the tool output to answer factual questions or comparisons based on the available
+                  sheets.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-number">05</div>
+              <div>
+                <h3>Validate the result</h3>
+                <p>Responses should be checked against the source spreadsheet during the demonstration. This
+                  implementation is a proof of concept.</p>
+              </div>
+            </li>
+          </ol>
+        </article>
+        <article class="article-block">
+          <div class="kicker">DETAILED IMPLEMENTATION</div>
+          <h2>What the workflow actually does</h2>
+          <p>The agent selects relevant spreadsheet tools based on the question and uses their returned data to
+            formulate an answer. This is a proof of concept for conversational self-service analytics.</p>
+          <h3>Implementation activities and workflow capabilities</h3>
+          <ul class="feature-list">
+            <li>Requirements research for conversational self-service analytics.</li>
+            <li>evaluation of Custom GPT, WhatsApp AI, Telegram and web assistant approaches.</li>
+            <li>assessment of static knowledge limitations for frequently updated reporting data.</li>
+            <li>n8n Chat Interface / Chat Trigger.</li>
+            <li>OpenAI model integration.</li>
+            <li>n8n AI Agent.</li>
+            <li>five Google Sheets tools.</li>
+            <li>structured sheet descriptions.</li>
+            <li>retrieval from Posts, Ads, Audience and Page Growth reporting data.</li>
+            <li>natural-language factual questions, rankings and comparisons.</li>
+            <li>response validation against dashboard sheets.</li>
+            <li>PoC implementation findings and future enhancement notes.</li>
+          </ul>
+        </article>
+        <article class="article-block">
+          <div class="kicker">05 / SCREENSHOT EVIDENCE</div>
+          <h2>Project screenshots</h2>
+          <p>Replace these placeholders with genuine, sanitized screenshots from the actual project. Suggested evidence:
+            Chat interface, AI Agent node, connected sheet tools, sample question and execution.</p>
+          <div class="screenshot-slot">
+            <img
+              src="../assets/images/projects/analytics-ai-agent-primary.png"
+              alt="Analytics AI Agent workflow"
+              style="width:100%; height:auto; border-radius:12px;">
+          </div>
+          <div class="screenshot-slot screenshot-slot-secondary">
+            <img
+              src="../assets/images/projects/analytics-ai-agent-output.png"
+              alt="Analytics AI Agent execution output"
+              style="width:100%; height:auto; border-radius:12px;">
+          </div>
+        </article>
+        <article class="article-block">
+          <div class="kicker">06 / TECHNOLOGY STACK</div>
+          <h2>Tools and integrations</h2>
+          <div class="case-stack"><span>n8n Chat Interface</span><span>n8n AI Agent</span><span>OpenAI
+              model</span><span>Google Sheets tools</span></div>
+        </article>
+        <article class="article-block">
+          <div class="kicker">07 / SCOPE & STATUS</div>
+          <h2>Implementation notes</h2>
+          <p>Clearly label this as a PoC. Do not describe it as an enterprise-grade autonomous agent or imply
+            unsupported capabilities.</p>
+        </article>
+        <article class="article-block">
+          <div class="kicker">08 / BUSINESS VALUE</div>
+          <h2>Why this automation matters</h2>
+          <p>This system connects steps that would otherwise require people to move information manually between tools
+            or repeatedly check operational data. It provides a more structured and traceable process. The exact
+            operational impact depends on the team's usage, data quality and the workflow configuration; no unverified
+            performance or financial results are claimed here.</p>
+        </article>
+
+        Published project walkthrough:
+        <section class="case-video-section">
+          <div class="container">
+            <div class="kicker">PROJECT WALKTHROUGH</div>
+            <h2>Watch the workflow in action</h2>
+            <div class="case-video-frame">
+              <iframe src="https://www.youtube.com/embed/_VacomDLu84?rel=0"
+                title="WakeUp by TR — Analytics AI Agent walkthrough" loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+        </section>
+
+        <div class="case-bottom-nav"><a class="btn btn-secondary" href="../projects.html">← Explore all projects</a><a
+            class="btn btn-primary" href="../contact.html">Contact about a similar project ↗</a></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-inner"><span>© <span id="year"></span> Abhishek Abhinav</span><a
+        href="../index.html">Back to homepage ↑</a></div>
+  </footer>
+  <script src="../assets/js/site.js"></script>
+</body>
+
+</html>
