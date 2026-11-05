@@ -705,3 +705,23 @@ img, iframe, video, canvas, svg { max-width:100%; }
   .nav-cta { order:4; }
   .menu-btn { order:5; }
 }
+
+
+/* FINAL FIX: Balanced 3-column project grids */
+@media (min-width: 761px) {
+  .grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 760px) and (min-width: 681px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .grid-3 {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}
